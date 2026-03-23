@@ -281,7 +281,7 @@ Agregar `FIREBASE_TOKEN` (obtenido con `firebase login:ci`) en los secrets del r
 
 | Tecnología | Uso |
 |-----------|-----|
-| Node.js 18 | Runtime en Firebase Cloud Functions |
+| Node.js 20 | Runtime en Firebase Cloud Functions |
 | Express.js | Framework HTTP |
 | TypeScript (strict) | Lenguaje principal |
 | Firebase Firestore | Base de datos |
