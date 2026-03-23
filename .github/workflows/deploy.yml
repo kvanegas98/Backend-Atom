@@ -52,5 +52,11 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
+      - name: Create .env file
+        run: |
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> functions/.env
+          echo "ALLOWED_ORIGINS=${{ secrets.ALLOWED_ORIGINS }}" >> functions/.env
+          echo "LOG_LEVEL=info" >> functions/.env
+
       - name: Deploy functions and Firestore rules
         run: firebase deploy --only functions,firestore --token "${{ secrets.FIREBASE_TOKEN }}"
